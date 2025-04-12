@@ -18,4 +18,7 @@ public interface TruckDao {
 
     @Query("SELECT * FROM trucks")
     LiveData<List<Truck>> getAllTrucks();
+
+    @Query("SELECT * FROM trucks WHERE kode_truck = :kode LIMIT 1")
+    LiveData<Truck> getTruckByKode(String kode);
 }

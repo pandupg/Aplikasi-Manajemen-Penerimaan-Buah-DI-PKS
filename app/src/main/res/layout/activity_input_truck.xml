@@ -14,11 +14,14 @@
         android:gravity="center"
         android:padding="16dp"/>
 
-    <EditText
-        android:id="@+id/et_kode_truck"
-        android:hint="Kode Truck"
+    <AutoCompleteTextView
+        android:id="@+id/inputKodeTruck"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Masukkan atau pilih kode truck"
+        android:inputType="text"
+        android:completionThreshold="1"
+        />
 
     <EditText
         android:id="@+id/et_nama_pengemudi"
