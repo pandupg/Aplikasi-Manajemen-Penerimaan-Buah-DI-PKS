@@ -37,7 +37,10 @@ public class Buah {
     @ColumnInfo(name = "waktu")
     public String waktu;
 
-    public Buah(double beratDatang, double beratPulang, int jumlahMatang, int jumlahMentah, int jumlahKematangan, int jumlahBusuk, String hari, String tanggal, String waktu) {
+    @ColumnInfo(name = "kode_truck")  // Menambahkan kolom kode_truck
+    public String kodeTruck;
+
+    public Buah(double beratDatang, double beratPulang, int jumlahMatang, int jumlahMentah, int jumlahKematangan, int jumlahBusuk, String hari, String tanggal, String waktu, String kodeTruck) {
         this.beratDatang = beratDatang;
         this.beratPulang = beratPulang;
         this.jumlahMatang = jumlahMatang;
@@ -47,6 +50,7 @@ public class Buah {
         this.hari = hari;
         this.tanggal = tanggal;
         this.waktu = waktu;
+        this.kodeTruck = kodeTruck;
     }
 }
 

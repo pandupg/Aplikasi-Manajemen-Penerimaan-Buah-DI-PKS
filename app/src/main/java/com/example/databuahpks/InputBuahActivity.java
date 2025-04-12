@@ -20,6 +20,7 @@ public class InputBuahActivity extends AppCompatActivity {
     EditText etBeratDatang, etBeratPulang, etMatang, etMentah, etKematangan, etBusuk;
     Button btnSimpan;
     AppDatabase db;
+    String kodeTruck; // Menyimpan kode_truck yang diterima
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,9 @@ public class InputBuahActivity extends AppCompatActivity {
         btnSimpan = findViewById(R.id.btn_simpan_buah);
 
         db = AppDatabase.getInstance(this);
+
+        // Ambil kode_truck yang dikirimkan dari InputTruckActivity
+        kodeTruck = getIntent().getStringExtra("kode_truck");
 
         btnSimpan.setOnClickListener(v -> {
             double datang = Double.parseDouble(etBeratDatang.getText().toString());
@@ -54,7 +58,7 @@ public class InputBuahActivity extends AppCompatActivity {
             String tanggal = sdfTanggal.format(sekarang);
             String waktu = sdfWaktu.format(sekarang);
 
-            Buah buah = new Buah(datang, pulang, matang, mentah, kematangan, busuk, hari, tanggal, waktu);
+            Buah buah = new Buah(datang, pulang, matang, mentah, kematangan, busuk, hari, tanggal, waktu, kodeTruck);
 
             new Thread(() -> {
                 db.buahDao().insert(buah);

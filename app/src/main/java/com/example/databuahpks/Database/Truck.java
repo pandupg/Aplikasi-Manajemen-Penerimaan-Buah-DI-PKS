@@ -20,5 +20,10 @@ public class Truck {
         this.kodeTruck = kodeTruck;
         this.namaPengemudi = namaPengemudi;
     }
+
+    // Getter untuk kodeTruck
+    public String getKodeTruck() {
+        return kodeTruck;
+    }
 }
 

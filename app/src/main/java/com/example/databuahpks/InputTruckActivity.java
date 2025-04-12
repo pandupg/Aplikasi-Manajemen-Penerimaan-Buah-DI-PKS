@@ -39,6 +39,7 @@ public class InputTruckActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     Toast.makeText(this, "Truck disimpan!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(InputTruckActivity.this, InputBuahActivity.class);
+                    intent.putExtra("kode_truck", kode); // Mengirimkan kode_truck
                     startActivity(intent);
                     finish(); // tutup halaman input_truck
                 });

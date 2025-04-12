@@ -31,5 +31,16 @@
             android:textColor="#555555"
             android:layout_marginTop="4dp" />
 
+        <ImageView
+            android:id="@+id/btnHapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Hapus"
+            android:layout_gravity="end"
+            android:paddingStart="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
