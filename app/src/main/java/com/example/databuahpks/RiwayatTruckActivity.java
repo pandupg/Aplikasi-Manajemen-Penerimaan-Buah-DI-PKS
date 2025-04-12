@@ -58,8 +58,21 @@ public class RiwayatTruckActivity extends AppCompatActivity {
         db.truckDao().getAllTrucks().observe(this, new Observer<List<Truck>>() {
             @Override
             public void onChanged(List<Truck> trucks) {
+                // Menyaring hanya kode truck yang unik
+                List<Truck> uniqueTrucks = new ArrayList<>();
+                List<String> uniqueKodeTruck = new ArrayList<>();
+
+                // Menyaring data truck agar hanya kode truck yang unik
+                for (Truck truck : trucks) {
+                    if (!uniqueKodeTruck.contains(truck.getKodeTruck())) {
+                        uniqueKodeTruck.add(truck.getKodeTruck());
+                        uniqueTrucks.add(truck);
+                    }
+                }
+
+                // Update truckList dengan data truck yang sudah difilter
                 truckList.clear();
-                truckList.addAll(trucks);
+                truckList.addAll(uniqueTrucks);
                 adapter.notifyDataSetChanged();
             }
         });

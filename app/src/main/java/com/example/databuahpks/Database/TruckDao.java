@@ -21,4 +21,7 @@ public interface TruckDao {
 
     @Query("SELECT * FROM trucks WHERE kode_truck = :kode LIMIT 1")
     LiveData<Truck> getTruckByKode(String kode);
+
+    @Query("SELECT DISTINCT kode_truck FROM trucks")
+    LiveData<List<String>> getDistinctKodeTrucks();
 }
