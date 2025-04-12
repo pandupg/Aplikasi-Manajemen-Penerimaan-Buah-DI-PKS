@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "d34644d17b3ab063c42a118dc9d8ae80",
+    "identityHash": "072bf69cf38b55b90e5f895e4e4bf7fe",
     "entities": [
       {
         "tableName": "trucks",
@@ -38,7 +38,7 @@
       },
       {
         "tableName": "buah",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `berat_datang` REAL NOT NULL, `berat_pulang` REAL NOT NULL, `jumlah_matang` INTEGER NOT NULL, `jumlah_mentah` INTEGER NOT NULL, `jumlah_kematangan` INTEGER NOT NULL, `jumlah_busuk` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `berat_datang` REAL NOT NULL, `berat_pulang` REAL NOT NULL, `jumlah_matang` INTEGER NOT NULL, `jumlah_mentah` INTEGER NOT NULL, `jumlah_kematangan` INTEGER NOT NULL, `jumlah_busuk` INTEGER NOT NULL, `hari` TEXT, `tanggal` TEXT, `waktu` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -81,6 +81,24 @@
             "columnName": "jumlah_busuk",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "hari",
+            "columnName": "hari",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tanggal",
+            "columnName": "tanggal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waktu",
+            "columnName": "waktu",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -96,7 +114,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd34644d17b3ab063c42a118dc9d8ae80')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '072bf69cf38b55b90e5f895e4e4bf7fe')"
     ]
   }
 }

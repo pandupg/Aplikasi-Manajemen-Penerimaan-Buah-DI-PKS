@@ -11,6 +11,10 @@ import android.widget.Toast;
 import com.example.databuahpks.Database.AppDatabase;
 import com.example.databuahpks.Database.Buah;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class InputBuahActivity extends AppCompatActivity {
 
     EditText etBeratDatang, etBeratPulang, etMatang, etMentah, etKematangan, etBusuk;
@@ -40,7 +44,17 @@ public class InputBuahActivity extends AppCompatActivity {
             int kematangan = Integer.parseInt(etKematangan.getText().toString());
             int busuk = Integer.parseInt(etBusuk.getText().toString());
 
-            Buah buah = new Buah(datang, pulang, matang, mentah, kematangan, busuk);
+            SimpleDateFormat sdfHari = new SimpleDateFormat("EEEE", Locale.getDefault());
+            SimpleDateFormat sdfTanggal = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+            SimpleDateFormat sdfWaktu = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+
+            Date sekarang = new Date();
+
+            String hari = sdfHari.format(sekarang);
+            String tanggal = sdfTanggal.format(sekarang);
+            String waktu = sdfWaktu.format(sekarang);
+
+            Buah buah = new Buah(datang, pulang, matang, mentah, kematangan, busuk, hari, tanggal, waktu);
 
             new Thread(() -> {
                 db.buahDao().insert(buah);

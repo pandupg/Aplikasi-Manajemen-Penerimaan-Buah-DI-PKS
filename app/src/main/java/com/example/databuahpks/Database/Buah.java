@@ -28,13 +28,25 @@ public class Buah {
     @ColumnInfo(name = "jumlah_busuk")
     public int jumlahBusuk;
 
-    public Buah(double beratDatang, double beratPulang, int jumlahMatang, int jumlahMentah, int jumlahKematangan, int jumlahBusuk) {
+    @ColumnInfo(name = "hari")
+    public String hari;
+
+    @ColumnInfo(name = "tanggal")
+    public String tanggal;
+
+    @ColumnInfo(name = "waktu")
+    public String waktu;
+
+    public Buah(double beratDatang, double beratPulang, int jumlahMatang, int jumlahMentah, int jumlahKematangan, int jumlahBusuk, String hari, String tanggal, String waktu) {
         this.beratDatang = beratDatang;
         this.beratPulang = beratPulang;
         this.jumlahMatang = jumlahMatang;
         this.jumlahMentah = jumlahMentah;
         this.jumlahKematangan = jumlahKematangan;
         this.jumlahBusuk = jumlahBusuk;
+        this.hari = hari;
+        this.tanggal = tanggal;
+        this.waktu = waktu;
     }
 }
 
