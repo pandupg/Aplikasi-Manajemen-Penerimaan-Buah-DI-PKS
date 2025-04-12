@@ -17,6 +17,7 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         //android:theme="@style/Theme.AppCompat.Light.NoActionBar" <= Hilangin nama app pada halaman tertenu
+        //android:theme="@style/Theme.DataBuahPKS" <= Titip theme default android stuido
 
         btnMulaiInput = findViewById(R.id.btn_mulai_input);
 

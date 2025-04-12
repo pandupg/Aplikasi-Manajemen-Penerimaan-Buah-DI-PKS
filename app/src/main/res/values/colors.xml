@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Color (Hijau Lembut) -->
+    <color name="colorPrimary">#4CAF50</color>
+
+    <!-- Primary Dark Color (Hijau Gelap) -->
+    <color name="colorPrimaryDark">#388E3C</color>
+
+    <!-- Accent Color (Biru Laut) -->
+    <color name="colorAccent">#03A9F4</color>
 </resources>
