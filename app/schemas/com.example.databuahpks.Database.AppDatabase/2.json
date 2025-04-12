@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "072bf69cf38b55b90e5f895e4e4bf7fe",
+    "entities": [
+      {
+        "tableName": "trucks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `kode_truck` TEXT, `nama_pengemudi` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kodeTruck",
+            "columnName": "kode_truck",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "namaPengemudi",
+            "columnName": "nama_pengemudi",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "buah",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `berat_datang` REAL NOT NULL, `berat_pulang` REAL NOT NULL, `jumlah_matang` INTEGER NOT NULL, `jumlah_mentah` INTEGER NOT NULL, `jumlah_kematangan` INTEGER NOT NULL, `jumlah_busuk` INTEGER NOT NULL, `hari` TEXT, `tanggal` TEXT, `waktu` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beratDatang",
+            "columnName": "berat_datang",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beratPulang",
+            "columnName": "berat_pulang",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jumlahMatang",
+            "columnName": "jumlah_matang",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jumlahMentah",
+            "columnName": "jumlah_mentah",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jumlahKematangan",
+            "columnName": "jumlah_kematangan",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jumlahBusuk",
+            "columnName": "jumlah_busuk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hari",
+            "columnName": "hari",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tanggal",
+            "columnName": "tanggal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waktu",
+            "columnName": "waktu",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '072bf69cf38b55b90e5f895e4e4bf7fe')"
+    ]
+  }
+}

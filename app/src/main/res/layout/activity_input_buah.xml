@@ -1,59 +1,77 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="16dp"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Input Buah"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"/>
 
-        <EditText
-            android:id="@+id/et_berat_datang"
-            android:hint="Berat Truck Datang"
-            android:inputType="numberDecimal"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/et_jumlah_matang"
-            android:hint="Jumlah Buah Matang"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_berat_datang"
+                android:hint="Berat Truck Datang"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/et_jumlah_mentah"
-            android:hint="Jumlah Buah Mentah"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_jumlah_matang"
+                android:hint="Jumlah Buah Matang"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/et_jumlah_kematangan"
-            android:hint="Jumlah Buah Kematangan"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_jumlah_mentah"
+                android:hint="Jumlah Buah Mentah"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/et_jumlah_busuk"
-            android:hint="Jumlah Buah Busuk"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_jumlah_kematangan"
+                android:hint="Jumlah Buah Kematangan"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/et_berat_pulang"
-            android:hint="Berat Truck Pulang"
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_jumlah_busuk"
+                android:hint="Jumlah Buah Busuk"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/btn_simpan_buah"
-            android:text="Simpan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
+            <EditText
+                android:id="@+id/et_berat_pulang"
+                android:hint="Berat Truck Pulang"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_simpan_buah"
+                android:text="Simpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

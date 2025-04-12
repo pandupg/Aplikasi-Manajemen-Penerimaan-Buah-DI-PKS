@@ -1,22 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="16dp"
-    android:gravity="center"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_mulai_input"
-        android:text="Mulai Input Truck"
+    <TextView
+        android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
+        android:text="Dashboard"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"/>
 
-    <Button
-        android:id="@+id/btnRiwayat"
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Riwayat"
-        android:layout_margin="16dp"/>
+        android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/btn_mulai_input"
+            android:text="Mulai Input Truck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+
+        <Button
+            android:id="@+id/btnRiwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riwayat"
+            android:layout_margin="16dp"/>
+    </LinearLayout>
 </LinearLayout>

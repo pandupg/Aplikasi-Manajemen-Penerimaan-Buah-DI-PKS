@@ -15,13 +15,13 @@
         tools:targetApi="31">
         <activity
             android:name=".RiwayatTruckActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".InputBuahActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".InputTruckActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".DashboardActivity"
             android:exported="true">

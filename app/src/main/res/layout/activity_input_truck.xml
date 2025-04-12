@@ -4,6 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Truk"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"/>
+
     <EditText
         android:id="@+id/et_kode_truck"
         android:hint="Kode Truck"
@@ -20,5 +30,6 @@
         android:id="@+id/btn_simpan_truck"
         android:text="Simpan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="end" />
 </LinearLayout>
